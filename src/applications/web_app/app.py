@@ -1,6 +1,7 @@
-#import sys
-#import os
-#sys.path.append('src/applications/')
+import sys
+import os
+sys.path.append('src/applications/')
+sys.path.append('src/applications/web_app/')
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate

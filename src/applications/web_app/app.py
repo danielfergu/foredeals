@@ -14,7 +14,7 @@ from web_app.models import db
 
 
 def create_app(env: Environment = Environment.from_env(), testing: bool = False) -> Flask:
-    #app = Flask(__name__)
+    app = Flask(__name__)
     #app.secret_key = env.secret_key
 
     if testing:

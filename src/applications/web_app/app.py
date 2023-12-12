@@ -1,3 +1,4 @@
+import sys
 sys.path.append('src/applications/')
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy

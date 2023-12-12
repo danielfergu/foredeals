@@ -1,6 +1,6 @@
-import sys
-import os
-sys.path.append('src/applications/')
+#import sys
+#import os
+#sys.path.append('src/applications/')
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -13,7 +13,7 @@ from web_app.models import db
 
 def create_app(env: Environment = Environment.from_env(), testing: bool = False) -> Flask:
     app = Flask(__name__)
-    app.secret_key = env.secret_key
+    #app.secret_key = env.secret_key
 
     if testing:
         # Configure the app for testing

@@ -19,7 +19,7 @@ class Environment:
 
         return cls(
             port=int(os.environ.get("PORT", 8080)),
-            secret_key=cos.environ.get("SECRET_KEY"),
+            secret_key=os.environ.get("SECRET_KEY"),
             host_url=os.environ.get("HOST_URL"),
             database_url=os.environ.get("DATABASE_URL"),
             use_flask_debug_mode=os.environ.get("USE_FLASK_DEBUG_MODE", "true")

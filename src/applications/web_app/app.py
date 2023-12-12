@@ -12,8 +12,10 @@ from web_app.notification_page import notification_page
 from web_app.health_api import health_api
 from web_app.models import db
 
+app = create_app()
+
 def create_app(env: Environment = Environment.from_env(), testing: bool = False) -> Flask:
-    app = Flask(__name__)
+    #app = Flask(__name__)
     #app.secret_key = env.secret_key
 
     if testing:

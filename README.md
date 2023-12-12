@@ -73,7 +73,7 @@ Event collaboration messaging enables seamless batch processing for the Data Ana
 
 ## Tests and Testing
 
-Tests have been conducted to verify both functional and non-functional requirements.
+Tests have been conducted to verify both functional and non-functional requirements when running locally.
 
 Functionality (through pytest Tests):
 
@@ -93,8 +93,7 @@ In order to automate and streamline the software development pipeline for the ap
 
 
 ## Production Monitoring and Instrumenting
-- A health check endpoint, returning a JSON response, has been implemented.
-- Basic logging for errors and events has been incorporated using Python's built-in logging, with configurations to persistently store the logs.
+- A health check endpoint, returning a JSON response to provide health checks has been implemented.
 
 
 ## Installation

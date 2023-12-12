@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Foredeals - Foreclosure Deals Notifier{% endblock %}
+
+{% block body %}
+<h2>Welcome to Foredeals!</h2>
+<h3>Find great forclosure deals and get notified</h3>
+
+     <form id="stateForm" method="POST">
+         <label for="stateSelect">Select a state:</label>
+         <select id="stateSelect" name="user_input">
+            {% for state, state_code in state_options.items() %}
+                <option value="{{ state_code }}">{{ state }}</option>
+            {% endfor %}
+         </select>
+         <input type="submit" value="Submit!">
+     </form>
+
+<script>
+    document.getElementById("stateForm").addEventListener("submit", function(event) {
+        var select = document.getElementById("stateSelect");
+        var selectedOption = select.options[select.selectedIndex];
+        var selectedStateCode = selectedOption.value;
+
+        // Redirect to the desired URL with the selectedStateCode
+        window.location.href = "/state/" + selectedStateCode;
+
+        // Prevent the form from submitting in the traditional way
+        event.preventDefault();
+    });
+</script>
+
+{% endblock %}

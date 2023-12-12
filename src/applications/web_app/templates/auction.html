@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .auction-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .auction-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .auction-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .auction-details {
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 10px;
+        }
+
+        .auction-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .auction-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e44d26;
+        }
+    </style>
+    <title>Auction Listings</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">Auction Listings for {{state_name}}:</h1>
+
+{% if auctions %}
+    {% for auction in auctions %}
+        <div class="auction-box">
+            <img src="{{ auction.photo }}" alt="{{ auction.title }}" width="150" height="150">
+            <div class="auction-title">{{ auction.description }}</div>
+            <div class="auction-details">{{ auction.state }}, {{ auction.city }}</div>
+            <a target="_blank" class="auction-link" href="https://www.bid4assets.com/auction/index/{{ auction.auid }}" target="_blank">View on External Page</a>
+            <div class="auction-price">${{ auction.price }}</div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p style="text-align: center;">There are no auctions in {{ state_name }} right now. Try another state.</p>
+{% endif %}
+
+</body>
+</html>

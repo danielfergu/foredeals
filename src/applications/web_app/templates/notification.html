@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Register for notifications{% endblock %}
+
+{% block body %}
+<h2>Register your email to get notifications for auctions.</h2>
+<div class="form-container">
+    <h4>Notification Preferences</h4>
+    <form action="/notification" method="post">
+        <label for="zip_code">Zip Code:</label>
+        <input class="form-input" type="text" name="zip_code" required>
+
+        <label for="sqft_price">Max Sqft Price($):</label>
+        <input class="form-input" type="number" name="sqft_price" step="0.01" required>
+
+        <label for="min_sqft">Minimum Sqft:</label>
+        <input class="form-input" type="number" name="min_sqft" step="0.01" required>
+
+        <label for="email">Email:</label>
+        <input class="form-input" type="email" name="email" required>
+
+        <button class="form-button input" type="submit">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}

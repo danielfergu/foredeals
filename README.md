@@ -42,7 +42,7 @@ The system should efficiently handle a significant load of concurrent connection
 
 A design approach has been taken to carefully structure components and facilitate communication between services, ensuring a balanced trade-off between performance and data consistency. The project architecture follows the App Continuum model, incorporating multiple applications and components within a unified single repository, with a specific focus on service-to-service communication. The system is composed of modular Python applications hosted on the Heroku platform, seamlessly integrated through Continuous Integration and Continuous Deployment pipelines.
 
-![Alt Text](architecture.png)
+![Architecture](architecture.png)
 
 ### Database
 The application employs a SQL database, specifically PostgreSQL, which is utilized both on Heroku or locally during development. This decision comes from the structured nature of the application's data, which involves determining zip codes, prices, and investment preferences. The emphasis is on prioritizing data consistency over availability or horizontal scaling, aligning with the principles of the ACID framework (Atomicity, Consistency, Isolation, Durability).
@@ -86,6 +86,7 @@ Performance:
 - K6 benchmarking tool: developed for validating non-functional requirements.
 - Chrome Developer Tools: used as an additional tool to assess loading times.
 
+![K6 Test](k6.png)
 
 ## Continuous Integration and Continuous Deployment
 In order to automate and streamline the software development pipeline for the application, a Heroku and Github setup was implemented. Part of the configuration is done thorugh the web interface and other through the Yaml file in the repo. The goal is to be able to integrate code with the team as fast as possible to avoid bugs, and to not push faulty code to production.

@@ -15,7 +15,7 @@
 
 Welcome to the GitHub repository for the "Foreclosure Deals Notifier" application, developed as the final project for CU MSCS CSCA028. This application addresses the challenge of identifying affordable foreclosure auctions and comparing prices against local real estate markets. Tailored for real state buyers in the US, it provides valuable insights sourced from specialized companies and includes an advanced notification system for timely alerts aligned with users' investment preferences.
 
-This repository provides insights into the architecture and development concepts behind the application, offering an overview of the decision-making process. The project's code is accessible within the repository, and a demo of the product can be found in this link: https://foredeals-5bef4b23bc51.herokuapp.com/
+This repository provides insights into the architecture and development concepts behind the application, offering an overview of the decision-making process. The project's code is accessible within the repository.
 
 
 ## Requirements
